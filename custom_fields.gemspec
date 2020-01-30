@@ -14,23 +14,22 @@ Gem::Specification.new 'custom_fields', CustomFields::VERSION do |spec|
   spec.license     = 'MIT'
 
   spec.files = Dir[
-    'LICENSE',
+    'MIT-LICENSE',
     'README.md',
     '{lib}/**/*',
     '{config}/**/*'
   ]
 
   spec.extra_rdoc_files = [
-    'LICENSE',
+    'MIT-LICENSE',
     'README.md'
   ]
 
-  spec.required_ruby_version = '~> 2.1'
-  # spec.required_rubygems_version = '~> 2.4'
+  # spec.required_ruby_version = '~> 2.5'
 
-  spec.add_dependency 'mongoid',             '~> 5.2.0'
-  spec.add_dependency 'carrierwave-mongoid', '~> 0.10.0'
-  spec.add_dependency 'activesupport',       '~> 4.2.7'
-  spec.add_dependency 'monetize',            '~> 1.6.0'
+  spec.add_dependency 'mongoid',             '>= 6.2', '< 7.0'
+  spec.add_dependency 'carrierwave-mongoid', '~> 1.1.0'
+  spec.add_dependency 'activesupport',       '>= 5.1', '< 6.0'
+  spec.add_dependency 'monetize',            '~> 1.9.0'
   spec.add_dependency 'bcrypt',              '~> 3.1.11'
 end

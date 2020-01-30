@@ -5,7 +5,7 @@ require 'carrierwave/mongoid'
 require 'monetize'
 require 'bcrypt'
 
-Money.use_i18n = false
+Money.locale_backend = :currency
 
 module CustomFields
 
@@ -29,6 +29,8 @@ end
      extensions/carrierwave
      extensions/mongoid/document
      extensions/mongoid/factory
+     extensions/mongoid/criteria/queryable/smash
+     extensions/mongoid/relations/options
      extensions/mongoid/relations/referenced/many
      extensions/mongoid/relations/referenced/in
      extensions/mongoid/fields.rb
@@ -36,7 +38,6 @@ end
      extensions/mongoid/fields/localized.rb
      extensions/mongoid/validations/collection_size.rb
      extensions/mongoid/validations/macros.rb
-     extensions/mongoid/attributes
      extensions/origin/smash.rb
      types/default
      types/string
